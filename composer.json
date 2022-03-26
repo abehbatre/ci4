@@ -3,6 +3,8 @@
     "type": "project",
     "description": "CodeIgniter4 starter app",
     "homepage": "https://codeigniter.com",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "MIT",
     "require": {
         "php": "^7.3 || ^8.0",

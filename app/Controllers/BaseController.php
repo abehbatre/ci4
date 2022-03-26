@@ -8,6 +8,8 @@ use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use Myth\Auth;
+
 
 /**
  * Class BaseController
@@ -35,7 +37,7 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['auth', 'html','text','form','session'];
 
     /**
      * Constructor.

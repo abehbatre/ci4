@@ -33,6 +33,31 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// Restricting : just can access for user role => ADMIN
+
+
+// ------------------------------------------------------------------------
+// menu users
+// ------------------------------------------------------------------------
+$routes->get('/user', 'User::index', ['filter' => 'role:admin']);
+
+$routes->get('/user/index', 'User::index', ['filter' => 'role:admin']);
+$routes->get('/user/(:num)', 'User::detail/$1', ['filter' => 'role:admin']);
+
+$routes->get('/user/add', 'User::add', ['filter' => 'role:admin']);
+
+
+
+// ------------------------------------------------------------------------
+// menu classroom
+// ------------------------------------------------------------------------
+$routes->get('/classroom', 'Classroom::index', ['filter' => 'role:admin,teacher']);
+$routes->get('/classroom2', 'Classroom::index2', ['filter' => 'role:admin,teacher']);
+
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
