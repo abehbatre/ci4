@@ -147,5 +147,3 @@ application/logs/*
 /vendor/
 
 # node module
-public/template/node_modules/*
-public/template/node_modules
